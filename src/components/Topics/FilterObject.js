@@ -13,6 +13,7 @@ class FilterObject extends Component {
             filteredArray: []
         };
         this.solveFilterObject = this.solveFilterObject.bind(this);
+        this.updateInput = this.updateInput.bind(this);
     }
     updateInput(val) {
         this.setState({
