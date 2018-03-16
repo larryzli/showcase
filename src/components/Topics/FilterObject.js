@@ -21,8 +21,8 @@ class FilterObject extends Component {
     });
   }
   solveFilterObject() {
-    const arr = this.state.unFilteredArray.filter((val, i, arr) => {
-      return val[this.state.userInput];
+    const arr = this.state.unFilteredArray.filter((el, i, arr) => {
+      return el[this.state.userInput];
     });
     this.setState({
       filteredArray: arr
@@ -39,7 +39,10 @@ class FilterObject extends Component {
           onChange={e => this.updateInput(e.target.value)}
           className="inputLine"
         />
-        <button onClick={this.solveFilterObject} className="confirmationButton">
+        <button
+          onClick={e => this.solveFilterObject()}
+          className="confirmationButton"
+        >
           Filter
         </button>
         <span className="resultsBox filterObjectRB">
