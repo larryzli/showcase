@@ -18,15 +18,8 @@ class EvenAndOdd extends Component {
   }
   solveEvenAndOdd() {
     const arr = this.state.userInput.split(",");
-    const evenArr = [];
-    const oddArr = [];
-    for (let i in arr) {
-      if (parseInt(arr[i], 10) % 2 === 0) {
-        evenArr.push(arr[i]);
-      } else {
-        oddArr.push(arr[i]);
-      }
-    }
+    const evenArr = arr.filter(e => e % 2 === 0);
+    const oddArr = arr.filter(e => e % 2 === 1);
     this.setState({
       evenArray: evenArr,
       oddArray: oddArr
