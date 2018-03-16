@@ -6,20 +6,17 @@ import Palindrome from "../Topics/Palindrome.js";
 import Sum from "../Topics/Sum.js";
 
 class TopicBrowser extends Component {
-    // constructor() {
-    //     super();
-    // }
-    render() {
-        return (
-            <div>
-                <EvenAndOdd />
-                <FilterObject />
-                <FilterString />
-                <Palindrome />
-                <Sum />
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <EvenAndOdd />
+        <FilterObject />
+        <FilterString />
+        <Palindrome />
+        <Sum />
+      </div>
+    );
+  }
 }
 
 export default TopicBrowser;
