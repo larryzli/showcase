@@ -27,7 +27,9 @@ class FilterString extends Component {
   }
   solveFilterString() {
     const arr = this.state.unFilteredArray.filter(val => {
-      return val.includes(this.state.userInput);
+      return val
+        .toLowerCase()
+        .includes(this.state.userInput.toLocaleLowerCase());
     });
     this.setState({
       filteredArray: arr
