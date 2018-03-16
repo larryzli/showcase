@@ -21,9 +21,9 @@ class FilterObject extends Component {
     });
   }
   solveFilterObject() {
-    const arr = this.state.unFilteredArray.filter((el, i, arr) => {
-      return el[this.state.userInput];
-    });
+    const arr = this.state.unFilteredArray.filter((el, i, arr) =>
+      el.hasOwnProperty(this.state.userInput.toLowerCase())
+    );
     this.setState({
       filteredArray: arr
     });
