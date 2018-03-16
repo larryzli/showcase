@@ -37,10 +37,10 @@ class EvenAndOdd extends Component {
           Split
         </button>
         <span className="resultsBox">
-          Evens: [{this.state.evenArray.join(",") || " "}]
+          Evens: [{this.state.evenArray.join(",")}]
         </span>
         <span className="resultsBox">
-          Odds: [{this.state.oddArray.join(",") || " "}]
+          Odds: [{this.state.oddArray.join(",")}]
         </span>
       </div>
     );
